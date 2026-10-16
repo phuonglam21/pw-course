@@ -1,0 +1,23 @@
+Sử dụng xpath tuyệt đối, chọn phần tử sau:
+Lấy input “Họ và tên”
+Lấy button “Đăng ký”
+Lấy hàng đầu tiên trong tbody
+Sử dụng xpath tương đối, chọn phần tử sau:
+Lấy input có placeholder=”Số điện thoại”
+Lấy email của “Trần Thị Bình” (hàng 2, cột 2)
+Lấy số điện thoại của “Lê Hoàng Cường” (hàng 3, cột 3)
+Lấy button có class=”btn-register”
+Lấy table có id=”resultTable” 
+
+https://gist.github.com/minhphong306/6f00adc60f45c898e26d55bcb6cc0ae9
+
+1.
+    1. /html/body/div/div/h2/form/input
+    2. /html/body/div/div/h2/form/button
+    3. //tbody/tr[1]
+2.
+    1. //input[text(),'Số điện thoại']
+    2. //tbody/tr[2]/td[2]
+    3. //tbody/tr[3]/td[3]
+    4. //button[@class='register']
+    5. //table[@id='resultTable']
