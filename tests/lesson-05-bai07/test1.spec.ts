@@ -9,7 +9,7 @@ const dateSelect = page.locator('//input[@id="dob"]')
   await page.goto('https://material.playwrightvn.com/01-xpath-register-page.html');
   await page.locator ('//input[@id="username"]').fill("Nguyễn Phương Lâm");
   await page.locator ('//input[@id="email"]').fill("phuonglap21112000@gmail.com");
-  await page.locator ('//input[@id="male"]').click();
+  await page.locator ('//input[@id="male"]').check();
   await page.locator ('//input[@id="reading"]').check();
     //Select by Value Interests:
   await interestsUser.selectOption("art");

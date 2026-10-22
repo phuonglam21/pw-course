@@ -1,0 +1,41 @@
+[1mdiff --git a/tests/lesson-05-bai07/test4.spec.js b/tests/lesson-05-bai07/test4.spec.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..63e487b[m
+[1m--- /dev/null[m
+[1m+++ b/tests/lesson-05-bai07/test4.spec.js[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32mimport {test, expect} from '@playwright/test';[m
+[32m+[m
+[32m+[m
+[32m+[m[32mtest ('Personal Notes', async ({page}) => {[m
+[32m+[m[32m    await page.goto ('https://material.playwrightvn.com/04-xpath-personal-notes.html')[m
+[32m+[m[32m    const textTitle = page.locator('#note-title')[m
+[32m+[m[32m    const textContent = page.locator('#note-content')[m
+[32m+[m[32m    const buttonAdd = page.locator ('#add-note')[m
+[32m+[m[32m    const buttonSearch = page.locator ('#search')[m
+[32m+[m
+[32m+[m[32mfor ( let numBer =1; numBer <= 30; numBer++){[m
+[32m+[m[32m    await textTitle.fill('Title' + numBer);[m
+[32m+[m[32m    await textContent.fill('bai ' + numBer);[m
+[32m+[m[32m    await buttonAdd.click();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    // await page.locator ('//input[@id="note-title"]').fill('Login');[m
+[32m+[m
+[32m+[m[32m    // await page.locator ('//input[@id="note-title"]').fill('Logout')[m
+[32m+[m[32m    // await page.locator ('//input[@id"note-title"]').fill('Register')[m
+[32m+[m[41m    [m
+[32m+[m[32m    // await page.locator ('//textarea[@id="note-content"]').fill('example value')[m
+[32m+[m[32m    // await page.locator ('//input[@id="note-content"]').fill('Logout 1')[m
+[32m+[m[32m    // await page.locator ('//input[@id="note-content"]').fill('Register 1')[m
+[32m+[m
+[32m+[m[32m    // await page.locator ('//button[@id="add-note"]').click();[m
+[32m+[m[41m    [m
+[32m+[m[32m    // await page.locator ('//input[@id="search"]').fill('Login');[m
+[32m+[m[32m}[m
+[32m+[m[32m//Search 1 cai[m[41m [m
+[32m+[m[32m    await buttonSearch.fill('Title 1')[m
+[32m+[m[32m//Search nhieu cai[m
+[32m+[m[32m    await buttonSearch.fill('1')[m
+[32m+[m
+[32m+[m[32m});[m
